@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "My CSS Debugger",
+  "version": "1.0",
+  "description": "A Firefox extension to debug CSS with colored divs",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.png"
+    },
+    "default_title": "Toggle CSS Debugging",
+    "default_popup": "popup.html"
+  }
+}
